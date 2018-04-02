@@ -1,0 +1,100 @@
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+    
+    <xs:complexType name="ConstituentApplicationType">
+	  <xs:sequence>
+		<xs:element name="constituent" type="ConstituentType"/>
+		<xs:element name="application" minOccurs="0" maxOccurs="unbounded" type="ApplicationType"/>
+	  </xs:sequence>
+	</xs:complexType>
+    
+	<xs:complexType name="ConstituentType">
+	  <xs:sequence>
+		<xs:element name="dateOfBirth"  minOccurs="0" type="xs:string"/>
+		<xs:element name="birthState"  minOccurs="0" type="xs:string"/>
+		<xs:element name="birthCountry"  minOccurs="0" type="xs:string"/>
+		<xs:element name="placeOfBirth"  minOccurs="0" type="xs:string"/>
+		<xs:element name="highestEducation"  minOccurs="0" type="xs:string"/>
+		<xs:element name="maritalStatus"  minOccurs="0" type="xs:string"/>
+		<xs:element name="maritalStatusDate"  minOccurs="0" type="xs:string"/>
+		<xs:element name="gender"  minOccurs="0" type="xs:string"/>
+		<xs:element minOccurs="0" maxOccurs="unbounded" name="address" type="AddressType"/>
+		<xs:element minOccurs="0" maxOccurs="unbounded" name="emailAddress" type="EmailAddressType"/>
+		<xs:element minOccurs="0" maxOccurs="unbounded" name="name" type="Name.Type"/>
+		<xs:element minOccurs="0" name="emergencyContact" type="EmergencyContactType"/>
+	  </xs:sequence>
+	</xs:complexType>
+  
+  <xs:complexType name="ApplicationType" mixed="false">
+ <!-- APPLICATION_ID,
+      CONSTITUENT_ID, -->
+		  <xs:sequence>
+	<xs:element name="applicationSequenceNumber" minOccurs="0" type="xs:string" />
+	<xs:element name="academicLevel"  minOccurs="0" type="xs:string"/>
+	<xs:element name="institution"  minOccurs="0" type="xs:string"/>
+	<xs:element name="admissionType"  minOccurs="0" type="xs:string"/>
+	<xs:element name="applicationDate"  minOccurs="0" type="xs:string"/>	 
+	<xs:element name="academicProgram"  minOccurs="0" type="AcademicProgramType"/>
+	  </xs:sequence>	
+  </xs:complexType>
+
+  <xs:complexType name="AddressType" mixed="false">
+  <!-- ADDRESS_ID,
+       CONSTITUENT_ID, -->
+	   	  <xs:sequence>
+	  <xs:element name="addressLine1"  minOccurs="0" type="xs:string"/>
+	  <xs:element name="addressLine2"  minOccurs="0" type="xs:string"/>
+	  <xs:element name="city"  minOccurs="0" type="xs:string"/>
+	  <xs:element name="state"  minOccurs="0" type="xs:string"/>
+	  <xs:element name="country"  minOccurs="0" type="xs:string"/>
+	  <xs:element name="postcode"  minOccurs="0" type="xs:string"/>
+	  	  </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="EmailAddressType" mixed="false">
+  	  <xs:sequence>
+  <!-- EMAIL_ID,
+       CONSTITUENT_ID -->
+	<xs:element name="emailAddressType"  minOccurs="0" type="xs:string"/>
+	<xs:element name="email"  minOccurs="0" type="xs:string"/>
+	<xs:element name="preferredEmailAddress"  minOccurs="0" type="xs:string"/>
+		  </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmergencyContactType" mixed="false">
+  	  <xs:sequence>
+  <!-- EMERGENCY_CONTACT_ID,
+        CONSTITUENT_ID, -->
+	<xs:element name="contactName"  minOccurs="0" type="xs:string"/>
+	<xs:element name="contactAddress"  minOccurs="0" type="xs:string"/>
+	<xs:element name="contactPhone" minOccurs="0" type="xs:string" />
+		  </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Name.Type" mixed="false">
+  	  <xs:sequence>
+  <!-- NAME_ID,
+		CONSTITUENT_ID, -->
+	<xs:element name="nameType" minOccurs="0" type="xs:string" />
+	<xs:element name="nameDisplay"  minOccurs="0" type="xs:string"/>
+	<xs:element name="namePrefix" minOccurs="0" type="xs:string" />
+	<xs:element name="nameSuffix" minOccurs="0" type="xs:string" />
+	<xs:element name="lastName" minOccurs="0" type="xs:string" />
+	<xs:element name="firstName" minOccurs="0" type="xs:string" />
+	<xs:element name="middleName" minOccurs="0" type="xs:string" />	
+	<xs:element name="userName" minOccurs="0" type="xs:string" />
+		  </xs:sequence>
+  </xs:complexType>
+  
+    <xs:complexType name="AcademicProgramType" mixed="false">
+	<!--   ACAD_PROG_ID,
+           APPLICATION_ID, -->
+	  <xs:sequence>
+	    <xs:element name="programType"  minOccurs="0" type="xs:string"/>
+	    <xs:element name="programStatusCode"  minOccurs="0" type="xs:string"/>
+	    <xs:element name="actionCodeDate"  minOccurs="0" type="xs:string"/>
+	    <xs:element name="admitTerm"  minOccurs="0" type="xs:string"/>
+	  </xs:sequence>
+	  </xs:complexType>
+  
+  <xs:element name="constituentApplication" type="ConstituentApplicationType" />	
+  
+</xs:schema>
+

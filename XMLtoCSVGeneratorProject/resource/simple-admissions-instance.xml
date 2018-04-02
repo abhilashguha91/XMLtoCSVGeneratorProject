@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constituentApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns="http://www.google.com">
+  <constituent>
+    <dateOfBirth>06-FEB-1974</dateOfBirth>
+    <birthState>cd</birthState>
+    <birthCountry>UK</birthCountry>
+    <placeOfBirth></placeOfBirth>
+    <highestEducation>MSc</highestEducation>
+    <maritalStatus>Single</maritalStatus>
+    <maritalStatusDate>06-FEB-1974</maritalStatusDate>
+    <gender></gender>
+    <address>
+      <addressLine1>21 Downing Road</addressLine1>
+      <addressLine2></addressLine2>
+      <city>Sheffield</city>
+      <state>S Yorks</state>
+      <country>UK</country>
+      <postcode>S9 7SH</postcode>
+    </address>
+    <emailAddress>
+      <emailAddressType>Personal</emailAddressType>
+      <email>vampyre@arafel.org.uk</email>
+      <preferredEmailAddress>no</preferredEmailAddress>
+    </emailAddress>
+    <emailAddress>
+      <emailAddressType>Work</emailAddressType>
+      <email>Matt.jones@google.com</email>
+      <preferredEmailAddress>yes</preferredEmailAddress>
+    </emailAddress>
+    <name>
+      <nameType>Actual</nameType>
+      <nameDisplay>Matt jones</nameDisplay>
+      <namePrefix>Mr</namePrefix>
+      <nameSuffix></nameSuffix>
+      <lastName>jones</lastName>
+      <firstName>Matt</firstName>
+      <middleName>James</middleName>
+      <userName>pjn</userName>
+    </name>
+    <emergencyContact>
+      <contactName>Emily Wood</contactName>
+      <contactAddress>21 Downing Road Sheffield</contactAddress>
+      <contactPhone>999</contactPhone>
+    </emergencyContact>
+  </constituent>
+  <application>
+    <applicationSequenceNumber>889898</applicationSequenceNumber>
+    <academicLevel>Doctoral</academicLevel>
+    <institution>Sheffield</institution>
+    <admissionType>AdmmssionType</admissionType>
+    <applicationDate>29-MAY-2017</applicationDate>
+    <academicProgram>
+      <programType>Politics</programType>
+      <programStatusCode>POL-9898</programStatusCode>
+      <actionCodeDate>01-JAN-2017</actionCodeDate>
+      <admitTerm>Summer</admitTerm>
+    </academicProgram>
+  </application>
+</constituentApplication>
